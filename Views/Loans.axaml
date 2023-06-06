@@ -5,9 +5,105 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Library_3._0.Views.Loans"
         Title="Loans">
-	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-		<TextBlock>
-			Welcome to Loans!
-		</TextBlock>
-	</StackPanel>
+	<Grid>
+		<!-- Header -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+			<TextBlock Text="Loans Management" FontSize="24" FontWeight="Bold"/>
+		</StackPanel>
+
+		<!-- Book List -->
+		<ListBox Margin="20,50">
+			<!--ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}"-->
+			<!--<ListBox.ItemTemplate>-->
+			<ListBox.Items>
+				<!--<DataTemplate>-->
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="0" Text="Book 1" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" Text="Frank Basile"/>
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="2" Text="05/06/2023" />
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="3" Text="15/06/2023" />
+					<Button Grid.Column="4" Content="Delete">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/delete.png"/>
+							<TextBlock FontWeight="Bold" VerticalAlignment="Center">Delete</TextBlock>
+						</StackPanel>
+					</Button>
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="0" Text="Book 1" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" Text="Frank Basile"/>
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="2" Text="05/06/2023" />
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="3" Text="15/06/2023" />
+					<Button Grid.Column="4" Content="Delete">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/delete.png"/>
+							<TextBlock FontWeight="Bold" VerticalAlignment="Center">Delete</TextBlock>
+						</StackPanel>
+					</Button>
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="0" Text="Book 1" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" Text="Frank Basile"/>
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="2" Text="05/06/2023" />
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="3" Text="15/06/2023" />
+					<Button Grid.Column="4" Content="Delete">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/delete.png"/>
+							<TextBlock FontWeight="Bold" VerticalAlignment="Center">Delete</TextBlock>
+						</StackPanel>
+					</Button>
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				<!--</DataTemplate>-->
+			</ListBox.Items>
+			<!--</ListBox.ItemTemplate>-->
+		</ListBox>
+
+		<!-- Buttons -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+			<Button Margin="10,0" Width="150" Content="Create Loan">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/add.png"/>
+					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Create Loan</TextBlock>
+				</StackPanel>
+			</Button>
+			<!--Command="{Binding AddBookCommand}"-->
+			<Button Width="150" Content="Modify Loan">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/edit.png"/>
+					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Modify Loan</TextBlock>
+				</StackPanel>
+			</Button>
+			<!--Command="{Binding ModifyBookCommand}"-->
+		</StackPanel>
+	</Grid>
 </Window>

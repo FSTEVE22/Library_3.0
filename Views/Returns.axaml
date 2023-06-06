@@ -5,9 +5,68 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Library_3._0.Views.Returns"
         Title="Returns">
-	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-		<TextBlock>
-			Welcome to Returns!
-		</TextBlock>
-	</StackPanel>
+	<Grid>
+		<!-- Header -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+			<TextBlock Text="Returns" FontSize="20" FontWeight="Bold"/>
+		</StackPanel>
+
+		<!-- Book List -->
+		<ListBox Margin="20,50">
+			<!--ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}"-->
+			<!--<ListBox.ItemTemplate>-->
+
+			<ListBox.Items>
+				<!--<DataTemplate>-->
+
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center" Margin="10,5" Grid.Column="0" Text="Book 1" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="1" Text="Frank B"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="2" Text="10/06/2023"/>
+					<Button Grid.Column="4" Content="Validate">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/ok.png"/>
+							<TextBlock FontWeight="Bold" VerticalAlignment="Center">Validate</TextBlock>
+						</StackPanel>
+					</Button>
+
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center" Margin="10,5" Grid.Column="0" Text="Book 2" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="1" Text="Steve F"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="2" Text="10/06/2023"/>
+					<Button Grid.Column="4" Content="Validate">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/ok.png"/>
+							<TextBlock FontWeight="Bold" VerticalAlignment="Center">Validate</TextBlock>
+						</StackPanel>
+					</Button>
+
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				<!--</DataTemplate>-->
+			</ListBox.Items>
+			<!--</ListBox.ItemTemplate>-->
+		</ListBox>
+		<StackPanel Margin="10,15" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+			<TextBlock FontWeight="Bold">Welcome to Library 3.0</TextBlock>
+		</StackPanel>
+	</Grid>
 </Window>

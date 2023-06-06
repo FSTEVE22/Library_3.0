@@ -18,6 +18,7 @@
     <None Remove="Assets\edit.png" />
     <None Remove="Assets\home.png" />
     <None Remove="Assets\loan.png" />
+    <None Remove="Assets\ok.png" />
     <None Remove="Assets\return.png" />
   </ItemGroup>
 
