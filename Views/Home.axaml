@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Library_3._0.Views.Home"
+        Title="Home">
+	<Grid>
+		<!-- Header -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+			<TextBlock Text="Upcoming returns" FontSize="20" FontWeight="Bold"/>
+		</StackPanel>
+		
+		<!-- Book List -->
+		<ListBox Margin="20,50">
+			<!--ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}"-->
+			<!--<ListBox.ItemTemplate>-->
+
+			<ListBox.Items>
+				<!--<DataTemplate>-->
+
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center" Margin="10,5" Grid.Column="0" Text="Book 1" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="1" Text="Borrower"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="2" Text="10/06/2023"/>
+					
+
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center" Margin="10,5" Grid.Column="0" Text="Book 2" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="1" Text="Borrower"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,5" Grid.Column="2" Text="12/06/2023"/>
+
+
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				<!--</DataTemplate>-->
+			</ListBox.Items>
+			<!--</ListBox.ItemTemplate>-->
+		</ListBox>
+		<StackPanel Margin="10,15" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+			<TextBlock FontWeight="Bold">Welcome to Library 3.0</TextBlock>
+		</StackPanel>
+	</Grid>
+	
+</Window>

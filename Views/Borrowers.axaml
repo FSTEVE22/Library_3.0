@@ -1,0 +1,90 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Library_3._0.Views.Borrowers"
+        Title="Borrowers">
+
+	<Grid>
+		<!-- Header -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+			<TextBlock Text="Borrowers" FontSize="24" FontWeight="Bold"/>
+		</StackPanel>
+
+		<!-- Book List -->
+		<ListBox Margin="20,50">
+			<!--ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}"-->
+			<!--<ListBox.ItemTemplate>-->
+			<ListBox.Items>
+				<!--<DataTemplate>-->
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Basile" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" Text="Frank" />
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="2" Text="+32 495 87 95 22"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="3" Text="BasileF@gmail.com"/>
+					<Button Grid.Column="4" Content="Delete">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/delete.png"/>
+							<TextBlock FontWeight="Bold" VerticalAlignment="Center">Delete</TextBlock>
+						</StackPanel>
+					</Button>
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<TextBlock VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Steve" FontWeight="Bold"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" Text="Franck" />
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="2" Text="+32 465 81 33 29"/>
+					<TextBlock VerticalAlignment="Center"  Margin="10,0" Grid.Column="3" Text="SteveF@gmail.com"/>
+					<Button Grid.Column="4" Content="Delete">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/delete.png"/>
+							<TextBlock FontWeight="Bold" VerticalAlignment="Center">Delete</TextBlock>
+						</StackPanel>
+					</Button>
+					<!--Command="{Binding DeleteCommand}" CommandParameter="{Binding}"-->
+
+				</Grid>
+				
+				<!--</DataTemplate>-->
+			</ListBox.Items>
+			<!--</ListBox.ItemTemplate>-->
+		</ListBox>
+
+		<!-- Buttons -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+			<Button Margin="10,0" Width="200" Content="Add Borrower">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/add.png"/>
+					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Add Borrower</TextBlock>
+				</StackPanel>
+			</Button>
+			<!--Command="{Binding AddBookCommand}"-->
+			<Button Width="200" Content="Modify Borrower">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/edit.png"/>
+					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Modify Borrower</TextBlock>
+				</StackPanel>
+			</Button>
+			<!--Command="{Binding ModifyBookCommand}"-->
+		</StackPanel>
+	</Grid>
+</Window>
