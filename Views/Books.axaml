@@ -88,14 +88,14 @@
 
 			<!-- Buttons -->
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
-				<Button Margin="10,0" Width="150" Content="Add Book">
+				<Button Margin="10,0" Width="150" Content="Add Book" Click="AddBook">
 					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 						<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/add.png"/>
 						<TextBlock FontWeight="Bold" VerticalAlignment="Center">Add Book</TextBlock>
 					</StackPanel>
 				</Button>
 				<!--Command="{Binding AddBookCommand}"-->
-				<Button Width="150" Content="Modify Book">
+				<Button Width="150" Content="Modify Book" Click="EditBook">
 					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 						<Image Margin="0,0,5,0" Width="20" Height="20" Source="/Assets/edit.png"/>
 						<TextBlock FontWeight="Bold" VerticalAlignment="Center">Modify Book</TextBlock>

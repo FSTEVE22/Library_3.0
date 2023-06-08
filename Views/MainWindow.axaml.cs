@@ -35,5 +35,10 @@ namespace Library_3._0.Views
         {
             contentArea.Content = new Returns().Content;
         }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
