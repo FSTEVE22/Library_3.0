@@ -1,0 +1,65 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="550"
+        x:Class="Library_3._0.Views.Forms.CreateLoanForm"
+        Icon="/Assets/loan.png"
+		Title="Create Loan" Width="500" Height="550">
+
+	<Grid>
+		<!-- Header -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+			<TextBlock Text="Create Loan" FontSize="24" FontWeight="Bold"/>
+		</StackPanel>
+
+		<!-- Book List -->
+		<StackPanel Margin="20,50">
+
+			<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Borrowed Date" />
+				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Return Date" />
+				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Borrowed Book" />
+				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Borrower" />
+				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
+			</StackPanel>
+			
+		</StackPanel>
+
+		<!-- Buttons -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+			<Button Margin="10,0" Width="150" Content="Save">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Save</TextBlock>
+				</StackPanel>
+			</Button>
+			<!--Command="{Binding AddBookCommand}"-->
+			<Button Width="150" Click="CancelCreateLoan" Content="Cancel">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Cancel</TextBlock>
+				</StackPanel>
+			</Button>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -16,6 +16,7 @@
     <None Remove="Assets\borrowers.png" />
     <None Remove="Assets\delete.png" />
     <None Remove="Assets\edit.png" />
+    <None Remove="Assets\exit.png" />
     <None Remove="Assets\home.png" />
     <None Remove="Assets\loan.png" />
     <None Remove="Assets\ok.png" />

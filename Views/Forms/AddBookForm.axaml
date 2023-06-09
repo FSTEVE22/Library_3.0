@@ -7,79 +7,79 @@
 		Icon="/Assets/books-2.png"
         Title="Add Book" Width="500" Height="550">
 	
-	<Grid>
-		<!-- Header -->
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-			<TextBlock Text="Add book" FontSize="24" FontWeight="Bold"/>
-		</StackPanel>
+		<Grid>
+			<!-- Header -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+				<TextBlock Text="Add book" FontSize="24" FontWeight="Bold"/>
+			</StackPanel>
 
-		<!-- Book List -->
-		<StackPanel Margin="20,50">
+			<!-- Book List -->
+			<StackPanel Margin="20,50">
 			
+					<StackPanel Orientation="Horizontal" Margin="10,10">
+					
+
+						<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="ISBN" />
+						<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+					
+					</StackPanel>
 				<StackPanel Orientation="Horizontal" Margin="10,10">
-					
 
-					<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="ISBN" />
+
+					<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Title" />
 					<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
-					
+
 				</StackPanel>
-			<StackPanel Orientation="Horizontal" Margin="10,10">
+				<StackPanel Orientation="Horizontal" Margin="10,10">
 
 
-				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Title" />
-				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+					<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Author" />
+					<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
 
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Margin="10,10">
-
-
-				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Author" />
-				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
-
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Margin="10,10">
-
-
-				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Year of publication" />
-				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
-
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Margin="10,10">
-
-
-				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Author" />
-				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
-
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Margin="10,10">
-
-
-				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Number of pages" />
-				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
-
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Margin="10,10">
-
-
-				<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Stock" />
-				<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
-
-			</StackPanel>
-		</StackPanel>
-
-		<!-- Buttons -->
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
-			<Button Margin="10,0" Width="150" Content="Save">
-				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Save</TextBlock>
 				</StackPanel>
-			</Button>
-			<!--Command="{Binding AddBookCommand}"-->
-			<Button Width="150" Click="CancelAddBook" Content="Cancel">
-				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock FontWeight="Bold" VerticalAlignment="Center">Cancel</TextBlock>
+				<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+					<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Year of publication" />
+					<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
 				</StackPanel>
-			</Button>
-		</StackPanel>
-	</Grid>
+				<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+					<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Author" />
+					<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+					<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Number of pages" />
+					<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="10,10">
+
+
+					<TextBlock Width="125" VerticalAlignment="Center" Margin="10,0" Grid.Column="0" Text="Stock" />
+					<TextBox Width="275" VerticalAlignment="Center"  Margin="10,0" Grid.Column="1" FontWeight="Bold"/>
+
+				</StackPanel>
+			</StackPanel>
+
+			<!-- Buttons -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+				<Button Margin="10,0" Width="150" Content="Save">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+						<TextBlock FontWeight="Bold" VerticalAlignment="Center">Save</TextBlock>
+					</StackPanel>
+				</Button>
+				<!--Command="{Binding AddBookCommand}"-->
+				<Button Width="150" Click="CancelAddBook" Content="Cancel">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+						<TextBlock FontWeight="Bold" VerticalAlignment="Center">Cancel</TextBlock>
+					</StackPanel>
+				</Button>
+			</StackPanel>
+		</Grid>
 </Window>
